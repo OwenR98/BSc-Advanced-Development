@@ -7,8 +7,8 @@ from bson.json_util import dumps
  
 app = flask.Flask(__name__) 
  
-cluster = MongoClient("mongodb+srv://xin:1234@advanceddevelopmentunit.g4vl5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority") 
-db = cluster["Pythontest"] 
+cluster = MongoClient("mongodb+srv://Owen:Owen@adlabcluster.ypwbz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority") 
+db = cluster["pythontest"] 
 collection = db["Students"] 
  
 def get_mongodb_items(): 
@@ -56,5 +56,5 @@ if __name__ == '__main__':
     # Flask's development server will automatically serve static files in 
     # the "static" directory. See: http://flask.pocoo.org/docs/1.0/quickstart/#static-files. 
     # Once deployed, App Engine itself will serve those files as configured in app.yaml.
-    
+
     app.run(host='127.0.0.1', port=8080, debug=True)
